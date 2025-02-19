@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CourtController;
+use App\Http\Controllers\CourtTypeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,5 +24,10 @@ Route::get('/service', function(){
     return view('mservice');
 });
 
+Route::get('/court-type', [CourtTypeController::class, 'index']);
+Route::post('/court-type', [CourtTypeController::class, 'store']);
+
+Route::resource('court', CourtController::class);
 
 
+?>

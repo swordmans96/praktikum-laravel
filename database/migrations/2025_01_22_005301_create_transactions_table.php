@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('court_id');
-            $table->foreign('court_id')->references('id')->on('courts');
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('court_id')->constrained();
             $table->string('name');
             $table->string('address');
             $table->date('date');

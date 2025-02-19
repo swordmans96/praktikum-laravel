@@ -11,15 +11,21 @@
                 <th>Court Name</th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a class="btn btn-sm btn-warning" href="">Edit</a>
-                    <a class="btn btn-sm btn-danger" href="">Hapus</a>
-                </td>
-            </tr>
+            @forelse($courts as $court)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $court->type->name }}</td>
+                    <td>{{ $court->name }}</td>
+                    <td>
+                        <a class="btn btn-sm btn-warning" href="">Edit</a>
+                        <a class="btn btn-sm btn-danger" href="">Hapus</a>
+                    </td>
+                </tr>
+            @empty
+                <div class="alert alert-danger">
+                      Belum ada data  
+                </div>
+            @endforelse
     </table>
 </div>
 <div class="col-md-4">

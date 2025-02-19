@@ -27,8 +27,12 @@
                     <a href="/project" class="nav-link text-white"><i class="bi bi-toggles2 me-2"></i>  MASTER PROJECT</a>
                 </li>
                 <li class="nav-item"></li>
-                    <a href="/service" class="nav-link text-white"><i class="bi bi-ui-radios me-2"></i>  MASTER SERVICE</a>
+                    <a href="/court-type" class="nav-link text-white"><i class="bi bi-ui-radios me-2"></i>  MASTER COURT-TYPE</a>
                 </li>
+                <li class="nav-item"></li>
+                    <a href="/court" class="nav-link text-white"><i class="bi bi-ui-radios me-2"></i>  MASTER COURT</a>
+                </li>
+
             </ul>
             <hr>
             <div class="dropdown">

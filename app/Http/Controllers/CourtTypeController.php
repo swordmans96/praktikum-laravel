@@ -9,8 +9,7 @@ class CourtTypeController extends Controller
 {
     public function index(){
         $types = CourtType::all();
-        return $types;
-        return view('mcourt_type');
+        return view('mcourt_type', compact('types'));
     }
 
     public function store(){
